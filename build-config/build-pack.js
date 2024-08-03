@@ -9,7 +9,7 @@ const afterPack = require('./build-after-pack')
 * @see https://www.electron.build/configuration/configuration
 */
 const options = {
-  appId: 'cn.toside.music.desktop',
+  appId: 'com.ikunshare.music.desktop',
   beforePack,
   afterPack,
   protocols: {
@@ -67,7 +67,7 @@ const winOptions = {
     allowToChangeInstallationDirectory: true,
     differentialPackage: true,
     license: './licenses/license.rtf',
-    shortcutName: 'LX Music',
+    shortcutName: 'LX Music  Mod',
   },
 }
 /**
@@ -81,9 +81,9 @@ const linuxOptions = {
     icon: './resources/icons',
     category: 'Utility;AudioVideo;Audio;Player;Music;',
     desktop: {
-      Name: 'LX Music',
-      'Name[zh_CN]': 'LX Music',
-      'Name[zh_TW]': 'LX Music',
+      Name: 'LX Music  Mod',
+      'Name[zh_CN]': 'LX Music  Mod',
+      'Name[zh_TW]': 'LX Music  Mod',
       Encoding: 'UTF-8',
       MimeType: 'x-scheme-handler/lxmusic',
       StartupNotify: 'false',

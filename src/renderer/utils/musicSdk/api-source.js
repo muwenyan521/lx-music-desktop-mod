@@ -1,21 +1,17 @@
 import apiSourceInfo from './api-source-info'
 import { apiSource, userApi } from '@renderer/store'
-// import api_temp_kw from './kw/api-temp'
-// // import api_test_bd from './bd/api-test'
-// import api_test_tx from './tx/api-test'
-// import api_test_kg from './kg/api-test'
-// import api_test_kw from './kw/api-test'
-// import api_test_mg from './mg/api-test'
-// import api_test_wy from './wy/api-test'
+import api_ikun_tx from './tx/api-ikun'
+import api_ikun_kg from './kg/api-ikun'
+import api_ikun_kw from './kw/api-ikun'
+import api_ikun_mg from './mg/api-ikun'
+import api_ikun_wy from './wy/api-ikun'
 
 const allApi = {
-  // temp_kw: api_temp_kw,
-  // // test_bd: api_test_bd,
-  // test_tx: api_test_tx,
-  // test_kg: api_test_kg,
-  // test_kw: api_test_kw,
-  // test_mg: api_test_mg,
-  // test_wy: api_test_wy,
+  ikun_tx: api_ikun_tx,
+  ikun_kg: api_ikun_kg,
+  ikun_kw: api_ikun_kw,
+  ikun_mg: api_ikun_mg,
+  ikun_wy: api_ikun_wy,
 }
 
 const apiList = {}

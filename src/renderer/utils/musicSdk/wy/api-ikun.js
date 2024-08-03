@@ -5,7 +5,7 @@ import { dnsLookup } from '../utils'
 
 const api_test = {
   getMusicUrl(songInfo, type) {
-    const requestObj = httpFetch(`http://ts.tempmusics.tk/url/bd/${songInfo.songmid}/${type}`, {
+    const requestObj = httpFetch(`http://110.42.36.53:1314/url/wy/${songInfo.songmid}/${type}`, {
       method: 'get',
       timeout,
       headers,
@@ -16,7 +16,9 @@ const api_test = {
       if (statusCode == 429) return Promise.reject(new Error(requestMsg.tooManyRequests))
       switch (body.code) {
         case 0: return Promise.resolve({ type, url: body.data })
-        default: return Promise.reject(new Error(requestMsg.fail))
+        case 1: return Promise.reject(new Error(requestMsg.ipblock))
+        case 2: return Promise.reject(new Error(requestMsg.fail))
+        case 5: return Promise.reject(new Error(requestMsg.ohh))
       }
     })
     return requestObj

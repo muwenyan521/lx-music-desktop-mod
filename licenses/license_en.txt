@@ -1,3 +1,5 @@
+** This version is not officially released by LX Music, please do not ask questions in the official Github Issue **
+
 This project is issued based on the Apache License 2.0 license. The following protocols are supplemented by Apache License 2.0.
 
 Words stipulate: "this project" in this agreement refers to the Luoxue Music Desktop Edition project; "user" refers to the user who signed this agreement; the "official music platform" refers to The official platform of the music source is collectively referred to; "copyright data" refers to the data that includes but not limited to images, audio, names, etc.

@@ -3,49 +3,17 @@ name: Build
 on:
   push:
     branches:
-      - master
+      - dev
 
 env:
   IS_CI: 'true'
 
 jobs:
-  # CheckCode:
-  #   name: Lint Code
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Check out git repository
-  #       uses: actions/checkout@v4
-
-  #     - name: Install Node.js
-  #       uses: actions/setup-node@v4
-  #       with:
-  #         node-version: 20
-
-  #     - name: Cache file
-  #       uses: actions/cache@v4
-  #       with:
-  #         path: |
-  #           node_modules
-  #           $HOME/.cache/electron
-  #           $HOME/.cache/electron-builder
-  #           $HOME/.npm/_prebuilds
-  #         key: ${{ runner.os }}-build-caches-${{ hashFiles('**/package-lock.json') }}
-  #         restore-keys: |
-  #           ${{ runner.os }}-build-
-
-  #     - name: Install Dependencies
-  #       run: |
-  #         npm ci
-
-  #     - name: Lint src code
-  #       run: npm run lint
-
   Windows:
     name: Windows
     runs-on: windows-latest
     env:
       NPM_CACHE: '%LocalAppData%/npm-cache'
-    # needs: CheckCode
     steps:
       - name: Check out git repository
         uses: actions/checkout@v4
@@ -66,7 +34,6 @@ jobs:
           npm run publish:win:setup:x64
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BT_TOKEN: ${{ secrets.BT_TOKEN }}
 
       - name: Generate file MD5
         run: |
@@ -79,7 +46,6 @@ jobs:
     runs-on: windows-latest
     env:
       NPM_CACHE: '%LocalAppData%/npm-cache'
-    # needs: CheckCode
     steps:
       - name: Check out git repository
         uses: actions/checkout@v4
@@ -104,7 +70,6 @@ jobs:
           npm run publish:win7:7z:x86
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BT_TOKEN: ${{ secrets.BT_TOKEN }}
 
       - name: Generate file MD5
         run: |
@@ -116,7 +81,6 @@ jobs:
     runs-on: macos-latest
     env:
       NPM_CACHE: ~/.npm
-    # needs: CheckCode
     steps:
       - name: Check out git repository
         uses: actions/checkout@v4
@@ -142,7 +106,6 @@ jobs:
           npm run publish:mac:dmg:arm64
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BT_TOKEN: ${{ secrets.BT_TOKEN }}
 
       - name: Generate file MD5
         run: |
@@ -154,7 +117,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NPM_CACHE: ~/.npm
-    # needs: CheckCode
     steps:
       - name: Install package
         run: sudo apt-get update && sudo apt-get install -y rpm libarchive-tools
@@ -180,7 +142,6 @@ jobs:
           npm run publish:linux:pacman
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BT_TOKEN: ${{ secrets.BT_TOKEN }}
 
       - name: Generate file MD5
         run: |

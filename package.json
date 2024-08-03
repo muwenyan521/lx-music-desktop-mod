@@ -1,9 +1,9 @@
 {
-  "name": "lx-music-desktop",
-  "version": "2.9.0-beta.6",
+  "name": "lx-music-pc-mod",
+  "version": "2.9.9",
   "description": "一个免费的音乐查找助手",
   "main": "./dist/main.js",
-  "productName": "lx-music-desktop",
+  "productName": "lx-music-pc-mod",
   "scripts": {
     "pack": "node build-config/pack.js && npm run pack:win:setup:x64",
     "pack:win": "node build-config/pack.js && npm run pack:win:setup:x64 && npm run pack:win:setup:x86 && npm run pack:win:setup:arm64 && npm run pack:win:setup:x86_64 && npm run pack:win:7z",
@@ -77,16 +77,16 @@
   },
   "macLanguagesInfoPlistStrings": {
     "en": {
-      "CFBundleDisplayName": "LX Music",
-      "CFBundleName": "LX Music"
+      "CFBundleDisplayName": "LX Music  Mod",
+      "CFBundleName": "LX Music  Mod"
     },
     "zh_CN": {
-      "CFBundleDisplayName": "LX Music",
-      "CFBundleName": "LX Music"
+      "CFBundleDisplayName": "LX Music  Mod",
+      "CFBundleName": "LX Music  Mod"
     },
     "zh_TW": {
-      "CFBundleDisplayName": "LX Music",
-      "CFBundleName": "LX Music"
+      "CFBundleDisplayName": "LX Music  Mod",
+      "CFBundleName": "LX Music  Mod"
     }
   },
   "repository": {
