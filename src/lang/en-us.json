@@ -467,7 +467,7 @@
   "setting__open_api_enable": "Enable open API service",
   "setting__open_api_port": "Service port",
   "setting__open_api_port_tip": "Please enter the open API service port",
-  "setting__open_api_tip": "This function is used to provide third-party software with the ability to call LX Music  Mod. You can see the currently available functions: ",
+  "setting__open_api_tip": "This function is used to provide third-party software with the ability to call LX Music Mod. You can see the currently available functions: ",
   "setting__open_api_tip_link": "Access document",
   "setting__other": "Extras",
   "setting__other_dislike_list": "dislike song rule",

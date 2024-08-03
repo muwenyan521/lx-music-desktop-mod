@@ -56,10 +56,10 @@
 
 #### Scheme URL支持
 
-从v1.17.0起支持 Scheme URL，可以使用此功能从浏览器等场景下调用LX Music  Mod，我们开发了一个[油猴脚本](https://github.com/lyswhut/lx-music-script#readme)配套使用，<br>
+从v1.17.0起支持 Scheme URL，可以使用此功能从浏览器等场景下调用LX Music Mod，我们开发了一个[油猴脚本](https://github.com/lyswhut/lx-music-script#readme)配套使用，<br>
 脚本安装地址：<https://greasyfork.org/zh-CN/scripts/438148><br>
 
-若你想自己调用LX Music  Mod，可以看[Scheme URL支持](https://lyswhut.github.io/lx-music-doc/desktop/scheme-url)
+若你想自己调用LX Music Mod，可以看[Scheme URL支持](https://lyswhut.github.io/lx-music-doc/desktop/scheme-url)
 
 #### 数据同步服务
 

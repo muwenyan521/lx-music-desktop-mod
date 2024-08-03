@@ -467,7 +467,7 @@
   "setting__open_api_enable": "启用开放API服务",
   "setting__open_api_port": "服务端口",
   "setting__open_api_port_tip": "请输入开放API服务端口",
-  "setting__open_api_tip": "该功能用于为第三方软件提供调用LX Music  Mod的能力，目前可用的功能可以看：",
+  "setting__open_api_tip": "该功能用于为第三方软件提供调用LX Music Mod的能力，目前可用的功能可以看：",
   "setting__open_api_tip_link": "接入文档",
   "setting__other": "其他",
   "setting__other_dislike_list": "不喜欢的歌曲规则",
