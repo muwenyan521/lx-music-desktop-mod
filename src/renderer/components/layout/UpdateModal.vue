@@ -21,11 +21,11 @@ material-modal(:show="versionInfo.showModal" max-width="60%" @close="handleClose
           p 更新信息获取失败，可能是无法访问Github导致的，请手动检查更新！
           p
             | 检查方法：打开
-            base-btn(min aria-label="点击打开" @click="handleOpenUrl('https://github.com/lyswhut/lx-music-desktop/releases')") 软件发布页
+            base-btn(min aria-label="点击打开" @click="handleOpenUrl('https://github.com/ikunshare/lx-music-desktop-mod/releases')") 软件发布页
             | 或
-            base-btn(min aria-label="点击打开" @click="handleOpenUrl('https://www.lanzoui.com/b0bf2cfa/')") 网盘
+            base-btn(min aria-label="点击打开" @click="handleOpenUrl('https://www.lanzoui.com/s/LXMusic')") 网盘
             | (密码：
-            strong.hover(aria-label="点击复制" @click="handleCopy('glqw')") glqw
+            strong.hover(aria-label="点击复制" @click="handleCopy('LXMusicMod')") LXMusicMod
             | )查看它们的
             strong 版本号
             | 与当前版本({{ versionInfo.version }})对比是否一样，
@@ -78,11 +78,11 @@ material-modal(:show="versionInfo.showModal" max-width="60%" @close="handleClose
       div(:class="$style.desc")
         p 发现有新版本啦，你可以尝试使用自动更新或手动更新，
         p 手动更新可以去&nbsp;
-          strong.hover.underline(aria-label="点击打开" @click="handleOpenUrl('https://github.com/lyswhut/lx-music-desktop/releases')") 软件发布页
+          strong.hover.underline(aria-label="点击打开" @click="handleOpenUrl('https://github.com/ikunshare/lx-music-desktop-mod/releases')") 软件发布页
           | &nbsp;或&nbsp;
-          strong.hover.underline(aria-label="点击打开" @click="handleOpenUrl('https://www.lanzoui.com/b0bf2cfa/')") 网盘
+          strong.hover.underline(aria-label="点击打开" @click="handleOpenUrl('https://www.lanzoui.com/s/LXMusic')") 网盘
           | (密码：
-          strong.hover(aria-label="点击复制" @click="handleCopy('glqw')") glqw
+          strong.hover(aria-label="点击复制" @click="handleCopy('LXMusicMod')") LXMusicMod
           | )&nbsp;下载
         p 注：国内Windows/MAC用户推荐到网盘下载，若遇到问题可以看
           strong.hover.underline(aria-label="点击打开" @click="handleOpenUrl('https://lyswhut.github.io/lx-music-doc/desktop/faq')") 常见问题
