@@ -5,7 +5,7 @@ import { dnsLookup } from '../utils'
 
 const api_test = {
   getMusicUrl(songInfo, type) {
-    const requestObj = httpFetch(`http://110.42.36.53:1314/url/wy/${songInfo.songmid}/${type}`, {
+    const requestObj = httpFetch(`http://110.42.41.81:1314/url/wy/${songInfo.songmid}/${type}`, {
       method: 'get',
       timeout,
       headers,
