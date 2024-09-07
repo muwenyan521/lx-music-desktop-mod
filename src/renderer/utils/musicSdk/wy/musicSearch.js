@@ -34,6 +34,13 @@ export default {
       const _types = {}
       let size
 
+      if (item.privilege.maxBrLevel == 'jymaster') {
+        size = item.ms ? sizeFormate(item.ms.size) : null
+        types.push({ type: 'master', size })
+        _types.master = {
+          size,
+        }
+      }
       if (item.privilege.maxBrLevel == 'hires') {
         size = item.hr ? sizeFormate(item.hr.size) : null
         types.push({ type: 'flac24bit', size })

@@ -256,6 +256,13 @@ export default {
           size,
         }
       }
+      if (file.size_new[0] !== 0) {
+        let size = sizeFormate(file.size_new)
+        types.push({ type: 'master', size })
+        _types.master = {
+          size,
+        }
+      }
       // types.reverse()
       return {
         singer: formatSingerName(item.singer, 'name'),

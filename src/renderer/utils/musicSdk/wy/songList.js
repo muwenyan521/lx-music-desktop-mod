@@ -133,7 +133,14 @@ export default {
       let privilege = privileges[index]
       if (privilege.id !== item.id) privilege = privileges.find(p => p.id === item.id)
       if (!privilege) return
-
+      
+      if (item.privilege.maxBrLevel == 'jymaster') {
+        size = item.ms ? sizeFormate(item.ms.size) : null
+        types.push({ type: 'master', size })
+        _types.master = {
+          size,
+        }
+      }
       if (privilege.maxBrLevel == 'hires') {
         size = item.hr ? sizeFormate(item.hr.size) : null
         types.push({ type: 'flac24bit', size })

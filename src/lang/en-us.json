@@ -635,6 +635,7 @@
   "tag__high_quality": "HQ",
   "tag__lossless": "SQ",
   "tag__lossless_24bit": "24bit",
+  "tag__lossless_master": "Master",
   "theme_add": "Add a theme",
   "theme_auto": "Auto",
   "theme_auto_tip": "Right-click to open the light and dark theme settings window",
