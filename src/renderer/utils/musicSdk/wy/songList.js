@@ -140,7 +140,7 @@ export default {
         _types.master = {
           size,
         }
-      
+      }
       if (privilege.maxBrLevel == 'hires') {
         size = item.hr ? sizeFormate(item.hr.size) : null
         types.push({ type: 'flac24bit', size })
