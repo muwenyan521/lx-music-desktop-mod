@@ -33,8 +33,12 @@ dd
   div
     base-checkbox.gap-left(
       v-for="item in playQualityList" :id="`setting_play_quality_${item}`" :key="item"
-      name="setting_play_quality" need :model-value="appSetting['player.playQuality']" :value="item" :label="item"
-      @update:model-value="updateSetting({'player.playQuality': $event})")
+      name="setting_play_quality" need
+      :model-value="appSetting['player.playQuality']"
+      :value="item"
+      :label="$t(`setting__play_playQuality_${item}`)"
+      @update:model-value="updateSetting({'player.playQuality': $event})"
+    )
 
 dd(:aria-label="$t('setting__play_mediaDevice_title')")
   h3#play_mediaDevice {{ $t('setting__play_mediaDevice') }}
