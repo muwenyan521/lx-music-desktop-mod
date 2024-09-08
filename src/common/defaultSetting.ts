@@ -11,7 +11,7 @@ const defaultSetting: LX.AppSetting = {
   'common.fontSize': 16,
   'common.startInFullscreen': false,
   'common.langId': null,
-  'common.apiSource': 'temp',
+  'common.apiSource': 'ikun_zj',
   'common.sourceNameType': 'alias',
   'common.font': '',
   'common.isShowAnimation': true,

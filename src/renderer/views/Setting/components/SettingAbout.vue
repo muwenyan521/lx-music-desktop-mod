@@ -11,7 +11,7 @@ dd
     span.hover(:aria-label="$t('setting__click_copy')" @click="clipboardWriteText('LXMusicMod')") LXMusicMod
   .p.small
     | 仍有问题可加企鹅群&nbsp;
-    span.hover(:aria-label="$t('setting__click_open')" @click="openUrl('https://qm.qq.com/q/6t0vScTtwQ')") 690309707
+    span.hover(:aria-label="$t('setting__click_open')" @click="openUrl('https://qm.qq.com/q/Uw54ZtkwIa')") 849514974
     | &nbsp;反馈
     strong (为了群主和管理的寿命，入群先看群公告)
 

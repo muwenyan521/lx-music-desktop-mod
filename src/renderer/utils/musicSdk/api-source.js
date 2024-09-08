@@ -1,23 +1,23 @@
 import apiSourceInfo from './api-source-info'
 import { apiSource, userApi } from '@renderer/store'
-import api_ikun_tx from './tx/api-ikun'
-import api_ikun_kg from './kg/api-ikun'
-import api_ikun_kw from './kw/api-ikun'
-import api_ikun_mg from './mg/api-ikun'
-import api_ikun_wy from './wy/api-ikun'
-import api_ikun_us_tx from './tx/api-ikun_us'
-import api_ikun_us_kg from './kg/api-ikun_us'
-import api_ikun_us_wy from './wy/api-ikun_us'
+import api_ikun_zj_tx from './tx/api-ikun'
+import api_ikun_zj_kg from './kg/api-ikun'
+import api_ikun_zj_kw from './kw/api-ikun'
+import api_ikun_zj_mg from './mg/api-ikun'
+import api_ikun_zj_wy from './wy/api-ikun'
+import api_ikun_cf_tx from './tx/api-ikun_us'
+import api_ikun_cf_kg from './kg/api-ikun_us'
+import api_ikun_cf_wy from './wy/api-ikun_us'
 
 const allApi = {
-  ikun_tx: api_ikun_tx,
-  ikun_kg: api_ikun_kg,
-  ikun_kw: api_ikun_kw,
-  ikun_mg: api_ikun_mg,
-  ikun_wy: api_ikun_wy,
-  ikun_tx_us: api_ikun_us_tx,
-  ikun_kg_us: api_ikun_us_kg,
-  ikun_wy_us: api_ikun_us_wy,
+  ikun_zj_tx: api_ikun_zj_tx,
+  ikun_zj_kg: api_ikun_zj_kg,
+  ikun_zj_kw: api_ikun_zj_kw,
+  ikun_zj_mg: api_ikun_zj_mg,
+  ikun_zj_wy: api_ikun_zj_wy,
+  ikun_cf_tx: api_ikun_cf_tx,
+  ikun_cf_kg: api_ikun_cf_kg,
+  ikun_cf_wy: api_ikun_cf_wy,
 }
 
 const apiList = {}
