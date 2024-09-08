@@ -177,7 +177,7 @@ const saveMeta = (downloadInfo: LX.Download.ListItem) => {
     }
     void window.lx.worker.download.writeMeta(downloadInfo.metadata.filePath, {
       title: downloadInfo.metadata.musicInfo.name,
-      artist: downloadInfo.metadata.musicInfo.singer,
+      artist: downloadInfo.metadata.musicInfo.singer?.replaceAll('、', ';'),
       album: downloadInfo.metadata.musicInfo.meta.albumName,
       APIC: imgUrl,
     }, lrcData, getProxy())
@@ -210,23 +210,40 @@ const downloadLyric = (downloadInfo: LX.Download.ListItem) => {
 }
 
 const getUrl = async(downloadInfo: LX.Download.ListItem, isRefresh: boolean = false) => {
-  return getMusicUrl({
-    musicInfo: downloadInfo.metadata.musicInfo,
-    isRefresh: false,
+  let toggleMusicInfo = downloadInfo.metadata.musicInfo.meta.toggleMusicInfo
+  return (toggleMusicInfo ? getMusicUrl({
+    musicInfo: toggleMusicInfo,
+    isRefresh,
     quality: downloadInfo.metadata.quality,
-    allowToggleSource: appSetting['download.isUseOtherSource'],
+    allowToggleSource: false,
+  }) : Promise.reject(new Error('not found'))).catch(() => {
+    return getMusicUrl({
+      musicInfo: downloadInfo.metadata.musicInfo,
+      isRefresh: false,
+      quality: downloadInfo.metadata.quality,
+      allowToggleSource: appSetting['download.isUseOtherSource'],
+    })
   }).catch(() => '')
 }
 const handleRefreshUrl = (downloadInfo: LX.Download.ListItem) => {
   setStatusText(downloadInfo, window.i18n.t('download_status_error_refresh_url'))
-  getMusicUrl({
-    musicInfo: downloadInfo.metadata.musicInfo,
+  let toggleMusicInfo = downloadInfo.metadata.musicInfo.meta.toggleMusicInfo
+  ;(toggleMusicInfo ? getMusicUrl({
+    musicInfo: toggleMusicInfo,
     isRefresh: true,
     quality: downloadInfo.metadata.quality,
-    allowToggleSource: appSetting['download.isUseOtherSource'],
+    allowToggleSource: false,
+  }) : Promise.reject(new Error('not found'))).catch(() => {
+    return getMusicUrl({
+      musicInfo: downloadInfo.metadata.musicInfo,
+      isRefresh: true,
+      quality: downloadInfo.metadata.quality,
+      allowToggleSource: appSetting['download.isUseOtherSource'],
+    })
   })
+    .catch(() => '')
     .then(url => {
-      // commit('setStatusText', { downloadInfo, text: '链接刷新成功' })
+    // commit('setStatusText', { downloadInfo, text: '链接刷新成功' })
       setUrl(downloadInfo, url)
       void window.lx.worker.download.updateUrl(downloadInfo.id, url)
     })
