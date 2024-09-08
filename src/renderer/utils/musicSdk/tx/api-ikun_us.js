@@ -3,9 +3,9 @@ import { requestMsg } from '../../message'
 import { headers, timeout } from '../options'
 import { dnsLookup } from '../utils'
 
-const api_ikun = {
+const api_ikun_us = {
   getMusicUrl(songInfo, type) {
-    const requestObj = httpFetch(`http://110.42.38.239:1314/url/wy/${songInfo.songmid}/${type}`, {
+    const requestObj = httpFetch(`https:/lxmusic.ikunshare.com/url/tx/${songInfo.songmid}/${type}`, {
       method: 'get',
       timeout,
       headers,
@@ -23,6 +23,9 @@ const api_ikun = {
     })
     return requestObj
   },
+  getPic(songInfo) {
+    return Promise.resolve(`https://y.gtimg.cn/music/photo_new/T002R500x500M000${songInfo.albumId}.jpg`)
+  },
 }
 
-export default api_ikun
+export default api_ikun_us

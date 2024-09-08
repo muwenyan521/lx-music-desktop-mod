@@ -5,6 +5,9 @@ import api_ikun_kg from './kg/api-ikun'
 import api_ikun_kw from './kw/api-ikun'
 import api_ikun_mg from './mg/api-ikun'
 import api_ikun_wy from './wy/api-ikun'
+import api_ikun_us_tx from './tx/api-ikun_us'
+import api_ikun_us_kg from './kg/api-ikun_us'
+import api_ikun_us_wy from './wy/api-ikun_us'
 
 const allApi = {
   ikun_tx: api_ikun_tx,
@@ -12,6 +15,9 @@ const allApi = {
   ikun_kw: api_ikun_kw,
   ikun_mg: api_ikun_mg,
   ikun_wy: api_ikun_wy,
+  ikun_tx_us: api_ikun_us_tx,
+  ikun_kg_us: api_ikun_us_kg,
+  ikun_wy_us: api_ikun_us_wy,
 }
 
 const apiList = {}

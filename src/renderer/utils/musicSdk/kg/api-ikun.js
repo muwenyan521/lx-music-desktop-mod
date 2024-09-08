@@ -3,9 +3,9 @@ import { requestMsg } from '../../message'
 import { headers, timeout } from '../options'
 import { dnsLookup } from '../utils'
 
-const api_test = {
+const api_ikun = {
   getMusicUrl(songInfo, type) {
-    const requestObj = httpFetch(`http://110.42.41.81:1314/url/kg/${songInfo._types[type].hash}/${type}`, {
+    const requestObj = httpFetch(`http://110.42.38.239:1314/url/kg/${songInfo._types[type].hash}/${type}`, {
       method: 'get',
       timeout,
       headers,
@@ -25,4 +25,4 @@ const api_test = {
   },
 }
 
-export default api_test
+export default api_ikun

@@ -3,9 +3,9 @@ import { requestMsg } from '../../message'
 import { headers, timeout } from '../options'
 import { dnsLookup } from '../utils'
 
-const api_ikun = {
+const api_ikun_us = {
   getMusicUrl(songInfo, type) {
-    const requestObj = httpFetch(`http://110.42.38.239:1314/url/wy/${songInfo.songmid}/${type}`, {
+    const requestObj = httpFetch(`https:/lxmusic.ikunshare.com/url/wy/${songInfo.songmid}/${type}`, {
       method: 'get',
       timeout,
       headers,
@@ -25,4 +25,4 @@ const api_ikun = {
   },
 }
 
-export default api_ikun
+export default api_ikun_us
