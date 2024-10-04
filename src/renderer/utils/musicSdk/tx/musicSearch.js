@@ -25,12 +25,12 @@ export default {
           os_ver: '12',
           phonetype: '0',
           devicelevel: '31',
-          tmeAppID: 'qqmusiclight',
+          tmeAppID: 'qqmusic',
           nettype: 'NETWORK_WIFI',
         },
         req: {
           module: 'music.search.SearchCgiService',
-          method: 'DoSearchForQQMusicLite',
+          method: 'DoSearchForQQMusicDesktop',
           param: {
             query: str,
             search_type: 0,
@@ -126,7 +126,8 @@ export default {
     if (limit == null) limit = this.limit
     // http://newlyric.kuwo.cn/newlyric.lrc?62355680
     return this.musicSearch(str, page, limit).then(({ body, meta }) => {
-      let list = this.handleResult(body.item_song)
+      console.log(body)
+      let list = this.handleResult(body.song.list)
 
       this.total = meta.estimate_sum
       this.page = page

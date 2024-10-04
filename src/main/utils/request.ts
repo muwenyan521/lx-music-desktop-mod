@@ -77,8 +77,8 @@ const buildHttpPromose = async(url: string, options: RequestOptions): Promise<Re
   return new Promise((resolve, reject) => {
     void fetchData(url, options.method, options, (err, resp, body) => {
       // options.isShowProgress && window.api.hideProgress()
-      // debugRequest && console.log(`\n---response------${url}------------`)
-      // debugRequest && console.log(body)
+      // console.log(`\n---response------${url}------------`)
+      // console.log(body)
       // obj.requestObj = null
       // obj.cancelFn = null
       if (err) {
@@ -108,11 +108,11 @@ const buildHttpPromose = async(url: string, options: RequestOptions): Promise<Re
   // }
   // obj.promise = new Promise((resolve, reject) => {
   //   obj.cancelFn = reject
-  //   debugRequest && console.log(`\n---send request------${url}------------`)
+  //   console.log(`\n---send request------${url}------------`)
   //   fetchData(url, options.method, options, (err, resp, body) => {
   //     // options.isShowProgress && window.api.hideProgress()
-  //     debugRequest && console.log(`\n---response------${url}------------`)
-  //     debugRequest && console.log(body)
+  //     console.log(`\n---response------${url}------------`)
+  //     console.log(body)
   //     obj.requestObj = null
   //     obj.cancelFn = null
   //     if (err) { reject(err); return }
