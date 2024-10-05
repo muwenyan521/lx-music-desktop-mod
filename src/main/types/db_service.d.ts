@@ -72,6 +72,7 @@ declare namespace LX {
       filePath: string
       musicInfo: string
       position: number
+      size: number | null
     }
 
     interface DislikeInfo {

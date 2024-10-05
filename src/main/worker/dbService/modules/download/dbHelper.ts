@@ -8,12 +8,12 @@ import {
   createClearStatement,
 } from './statements'
 
-/**
+ /**
  * 查询下载歌曲列表
  */
-export const queryDownloadList = () => {
+const queryDownloadList = () => {
   const queryStatement = createQueryStatement()
-  return queryStatement.all() as LX.DBService.DownloadMusicInfo[]
+  return queryStatement.all() as LX.DBService.DownloadMusicInfoWithSize[]
 }
 
 /**

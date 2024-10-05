@@ -9,7 +9,7 @@ import {
 
 let list: LX.Download.ListItem[]
 
-const toDBDownloadInfo = (musicInfos: LX.Download.ListItem[], offset: number = 0): LX.DBService.DownloadMusicInfo[] => {
+const toDBDownloadInfo = (musicInfos: LX.Download.ListItem[], offset: number = 0): LX.DBService.DownloadMusicInfoWithSize[] => {
   return musicInfos.map((info, index) => {
     return {
       id: info.id,
@@ -25,6 +25,7 @@ const toDBDownloadInfo = (musicInfos: LX.Download.ListItem[], offset: number = 0
       filePath: info.metadata.filePath,
       musicInfo: JSON.stringify(info.metadata.musicInfo),
       position: offset + index,
+      size: info.metadata.size,
     }
   })
 }

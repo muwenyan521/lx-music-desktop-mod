@@ -14,6 +14,7 @@
               <th class="nobreak" style="width: 22%;">{{ $t('download__status') }}</th>
               <th class="nobreak" style="width: 10%;">{{ $t('download__quality') }}</th>
               <th class="nobreak" style="width: 13%;">{{ $t('action') }}</th>
+              <th class="nobreak" style="width: 10%;">{{ $t('file_size') }}</th>
             </tr>
           </thead>
         </table>
@@ -195,8 +196,11 @@ export default {
       return appSetting['download.fileName'].replace('歌名', downloadInfo.metadata.musicInfo.name).replace('歌手', downloadInfo.metadata.musicInfo.singer)
     }
     const getTypeName = (quality) => {
-      return quality == 'flac24bit' ? 'FLAC Hires' : quality?.toUpperCase()
-    }
+          return quality == 'flac24bit' ? 'FLAC Hires' : quality?.toUpperCase()
+        }
+        const getFileSize = (size) => {
+          return size ? `${(size / 1024 / 1024).toFixed(2)} MB` : '-'
+        }
     return {
       listRef,
       list,
