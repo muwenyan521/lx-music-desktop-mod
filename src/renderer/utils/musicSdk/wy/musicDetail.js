@@ -24,7 +24,9 @@ export default {
 
       if (privilege.chargeInfoList.length > 4 && privilege.chargeInfoList[4].rate == 1999000 && privilege.chargeInfoList[4].chargeType == 1) {
         types.push({ type: 'master' })
-        _types.master = {}
+        _types.master = {
+          size: null,
+        }
       }
       if (privilege.maxBrLevel == 'hires') {
         size = item.hr ? sizeFormate(item.hr.size) : null
