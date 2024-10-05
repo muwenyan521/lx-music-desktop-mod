@@ -66,7 +66,7 @@ export default {
     return { id, cookie }
   },
   async getListDetail(rawId, page, tryNum = 0) { // 获取歌曲列表内的音乐
-    if (tryNum > 2) return Promise.reject(new Error('try max num'))
+    if (tryNum > 1000) return Promise.reject(new Error('try max num'))
 
     const { id, cookie } = await this.getListId(rawId)
     if (cookie) this.cookie = cookie
@@ -134,6 +134,10 @@ export default {
       if (privilege.id !== item.id) privilege = privileges.find(p => p.id === item.id)
       if (!privilege) return
 
+      if (privilege.chargeInfoList.length > 4 && privilege.chargeInfoList[4].rate == 1999000 && privilege.chargeInfoList[4].chargeType == 1) {
+        types.push({ type: 'master' })
+        _types.master = {}
+      }
       if (privilege.maxBrLevel == 'hires') {
         size = item.hr ? sizeFormate(item.hr.size) : null
         types.push({ type: 'flac24bit', size })

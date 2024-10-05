@@ -34,6 +34,10 @@ export default {
       const _types = {}
       let size
 
+      if (item.privilege.chargeInfoList.length > 4 && item.privilege.chargeInfoList[4].rate == 1999000 && item.privilege.chargeInfoList[4].chargeType == 1) {
+        types.push({ type: 'master' })
+        _types.master = {}
+      }
       if (item.privilege.maxBrLevel == 'hires') {
         size = item.hr ? sizeFormate(item.hr.size) : null
         types.push({ type: 'flac24bit', size })
